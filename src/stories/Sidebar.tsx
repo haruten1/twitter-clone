@@ -9,10 +9,11 @@ import { LuBookmark } from 'react-icons/lu'
 import { LiaUserFriendsSolid } from 'react-icons/lia'
 import { AiOutlineUser } from 'react-icons/ai'
 import { CgMoreO } from 'react-icons/cg'
+import { LinkButton } from './LinkButton'
 
 const navDivClass =
-  'inline rounded-3xl py-[10px]  pl-[10px] pr-[30px] align-middle group-hover/li:bg-gray-800'
-const Circle = () => {
+  'inline rounded-3xl py-[10px]  pl-[10px] pr-[30px] align-middle group-hover/li:bg-gray-800 transition-all duration-300 ease-out'
+const Sidebar = () => {
   return (
     <header className="h-full w-[275px] bg-black px-[20px] py-[20px] text-white">
       <a href="/home">
@@ -21,7 +22,7 @@ const Circle = () => {
         </h1>
       </a>
       <nav className="mt-[25px] text-[20px]">
-        <ul className="[&>li]:mt-[25px]">
+        <ul className="[&>li]:mt-[25px] ">
           <li>
             <a href="/home" className="group/li block">
               <div className={navDivClass}>
@@ -104,8 +105,11 @@ const Circle = () => {
           </li>
         </ul>
       </nav>
+      <div className="my-[40px]">
+        <LinkButton href="/post">Post</LinkButton>
+      </div>
     </header>
   )
 }
 
-export default Circle
+export default Sidebar
